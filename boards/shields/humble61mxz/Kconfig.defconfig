@@ -1,0 +1,7 @@
+
+if SHIELD_HUMBLE61MXZ
+
+config ZMK_KEYBOARD_NAME
+    default "humble61mxz"
+
+endif

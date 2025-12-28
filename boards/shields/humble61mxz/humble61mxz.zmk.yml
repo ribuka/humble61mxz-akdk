@@ -1,0 +1,11 @@
+
+file_format: "1"
+id: humble61mxz
+name: humble61mxz
+type: shield
+features:
+  - keys
+  - studio
+outputs:
+  - usb
+  - ble
