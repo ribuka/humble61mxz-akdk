@@ -33,7 +33,7 @@
                 &none     &kp INT1  &none     &none     &none     &none          &kp LC(Y)    &none     &none     &none     &kp PRSC  &kp RBKT  &kp INT3
 
                 /* Row 3 (12 keys) - Navigation */
-                &kp LCTRL &kp HOME  &kp END   &none     &none     &kp LS(INT1)   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none     &kp BSLH
+                &kp LCTRL &kp HOME  &kp END   &none     &none     &kp INT1       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none     &kp BSLH
 
                 /* Row 4 (12 keys) - Editing */
                 &kp LSHFT &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &none          &kp BSPC  &kp DEL   &none     &none     &none     &none
