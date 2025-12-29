@@ -2,6 +2,20 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        macro0: macro0 {
+            compatible = "zmk,behavior-macro";
+            label = "MACRO0";
+            #binding-cells = <0>;
+
+            bindings =
+                <&kp LCTRL>,
+                <&kp SLASH>,
+                <&kp LCTRL &kp RLS>,
+                <&kp DOWN>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -11,37 +25,37 @@
                 &kp TAB   &kp Q     &kp W     &kp E     &kp R       &kp T       &kp Y     &kp U     &kp I     &kp O     &kp P     &kp LBKT  &kp EQUAL
                 &kp LCTRL &kp A     &kp S     &kp D     &kp F       &kp G       &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
                 &kp LSHFT &kp Z     &kp X     &kp C     &kp V       &kp B       &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH &kp RSHFT
-                &kp ESC   &kp LCTRL &kp LGUI  &kp LALT  &lt 1 LANG2 &kp SPACE   &kp RET   &kp LANG1 &kp K_APP &kp PG_DN &kp PG_UP &none
+                &kp ESC   &kp LCTRL &kp LGUI  &kp LALT  &lt 1 LANG2 &kp SPACE   &kp RET   &kp LANG1 &kp K_APP &kp PG_DN &kp PG_UP &mo 3
             >;
         };
 
         layer_1 {
             bindings =<
                 &kp F12   &kp F2    &kp F3    &kp F4    &kp F5    &kp F6         &kp F12    &kp F7    &kp F8    &kp F9    &kp F10    &kp F11
-                &none     &kp INT1  &none     &none     &none     &none          &kp LC(Y)  &none     &none     &none     &kp PSCRN  &kp RBKT  &kp INT3
-                &kp LCTRL &kp HOME  &kp END   &none     &none     &kp UNDER      &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT &none      &kp BSLH
+                &none     &kp INT1  &none     &none     &none     &none          &kp LC(Y)  kp LC(U)  &none     &none     &kp PSCRN  &kp RBKT  &kp INT3
+                &kp LCTRL &kp HOME  &kp END   &none     &none     &kp LS(INT1)   &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT &none      &kp BSLH
                 &kp LSHFT &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &none          &kp BSPC   &kp DEL   &none     &none     &none      &none
-                &kp ESC   &kp LCTRL &none     &kp LALT  &none     &none          &none      &none     &none     &none     &none      &none
+                &kp ESC   &kp LCTRL &none     &kp LALT  &none     &none          &kp RET    &macro0   &none     &none     &none      &none
             >;
         };
 
         layer_2 {
             bindings =<
-                &none &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
+                &none &none &none &none &none &none   &none &none &none &none &none &none
+                &none &none &none &none &none &none   &none &none &none &none &none &none &none
+                &none &none &none &none &none &none   &none &none &none &none &none &none
+                &none &none &none &none &none &none   &none &none &none &none &none &none
+                &none &none &none &none &none &none   &none &none &none &none &none &none
             >;
         };
 
         layer_3 {
             bindings =<
-                &none &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none &none   &none &none &none &none &none
+                &none        &none        &none        &none        &none        &none &none   &none &none &none &none &none &none
+                &none        &none        &none        &none        &none        &none &none   &none &none &none &none &none
+                &none        &none        &none        &none        &none        &none &none   &none &none &none &none &none
+                &none        &none        &none        &none        &none        &none &none   &none &none &none &none &none
             >;
         };
     };
