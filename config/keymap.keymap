@@ -7,39 +7,21 @@
 
         layer_0 {
             bindings =<
-                /* Row 1 (12 keys) - Number row (except the last key) */
                 &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-
-                /* Row 2 (13 keys) - Q row + (last key belongs to number row on the real board) */
                 &kp TAB   &kp Q     &kp W     &kp E     &kp R       &kp T       &kp Y     &kp U     &kp I     &kp O     &kp P     &kp LBKT  &kp EQUAL
-
-                /* Row 3 (12 keys) - A row */
                 &kp LCTRL &kp A     &kp S     &kp D     &kp F       &kp G       &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
-
-                /* Row 4 (12 keys) - Z row */
                 &kp LSHFT &kp Z     &kp X     &kp C     &kp V       &kp B       &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH &kp RSHFT
-
-                /* Row 5 (12 keys) - Bottom row */
                 &kp ESC   &kp LCTRL &kp LGUI  &kp LALT  &lt 1 LANG2 &kp SPACE   &kp RET   &kp LANG1 &kp APP   &kp PG_DN &kp PG_UP &none
             >;
         };
 
         layer_1 {
             bindings =<
-                /* Row 1 (12 keys) - F row (except the last key) */
-                &kp F12   &kp F2    &kp F3    &kp F4    &kp F5    &kp F6         &kp F12   &kp F7    &kp F8    &kp F9    &kp F10   &kp F11
-
-                /* Row 2 (13 keys) - Tab row utilities + (last key belongs to number row on the real board) */
-                &none     &kp INT1  &none     &none     &none     &none          &kp LC(Y)    &none     &none     &none     &kp PRSC  &kp RBKT  &kp INT3
-
-                /* Row 3 (12 keys) - Navigation */
-                &kp LCTRL &kp HOME  &kp END   &none     &none     &kp INT1       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none     &kp BSLH
-
-                /* Row 4 (12 keys) - Editing */
-                &kp LSHFT &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &none          &kp BSPC  &kp DEL   &none     &none     &none     &none
-
-                /* Row 5 (12 keys) - Bottom row */
-                &kp ESC   &kp LCTRL &none     &kp LALT  &none     &none          &none     &none     &none     &none     &none     &none
+                &kp F12   &kp F2    &kp F3    &kp F4    &kp F5    &kp F6         &kp F12    &kp F7    &kp F8    &kp F9    &kp F10    &kp F11
+                &none     &kp INT1  &none     &none     &none     &none          &kp LC(Y)  &none     &none     &none     &kp PSCRN  &kp RBKT  &kp INT3
+                &kp LCTRL &kp HOME  &kp END   &none     &none     &kp UNDER      &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT &none      &kp BSLH
+                &kp LSHFT &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &none          &kp BSPC   &kp DEL   &none     &none     &none      &none
+                &kp ESC   &kp LCTRL &none     &kp LALT  &none     &none          &none      &none     &none     &none     &none      &none
             >;
         };
 
