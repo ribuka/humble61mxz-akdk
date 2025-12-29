@@ -8,11 +8,12 @@
             label = "MACRO0";
             #binding-cells = <0>;
 
-            bindings =
-                <&kp LCTRL>,
-                <&kp SLASH>,
-                <&kp LCTRL &kp RLS>,
-                <&kp DOWN>;
+            bindings
+                = <&macro_press   &kp LCTRL>
+                , <&macro_tap     &kp SLASH>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap     &kp DOWN>
+                ;
         };
     };
 
